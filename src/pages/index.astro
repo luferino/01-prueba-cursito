@@ -4,6 +4,7 @@ import Hero from '#components/hero.astro';
 import MiniBioPod from '#pods/mini-bio/mini-bio.pod.astro';
 import NewsletterPod from '#pods/newsletter/newsletter.pod.astro';
 import PopularPosts from '#pods/popular-posts/popular-posts.astro';
+import PostCollectionpod from '#pods/post-collection/post-collection.pod.astro';
 
 const homeContent = {
   hero: {
@@ -11,6 +12,7 @@ const homeContent = {
     description: 'Here you can find various articles on web application development.',
   },
 };
+
 ---
 
 <Layout title="John's Web Dev Blog">
@@ -23,8 +25,8 @@ const homeContent = {
     </div>
   </Hero>
 
-  <div>Place holder for post preview collection</div>
-
+  <PostCollectionpod  />
+  
   <Fragment slot="aside">
     <MiniBioPod type="card" />
     <NewsletterPod type="mini" />
